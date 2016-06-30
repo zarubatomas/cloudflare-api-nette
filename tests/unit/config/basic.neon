@@ -1,0 +1,6 @@
+cloudflare:
+    email: email@email.com
+    key: abc
+
+extensions:
+    cloudflare: TomasZaruba\Cloudflare\Nette\DI\CloudflareExtension

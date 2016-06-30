@@ -1,0 +1,29 @@
+{
+  "name": "tomaszaruba/cloudflare-api-nette",
+  "description": "Implementation of Cloudflare API into Nette framework",
+  "type": "library",
+  "license": "MIT",
+  "tags": ["cloudflare, api, nette, nette extension"],
+  "authors": [
+    {
+      "name": "Tomáš Záruba",
+      "homepage": "https://github.com/zarubatomas"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "jamesryanbell/cloudflare": "^1.6"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.2",
+    "nette/nette": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "TomasZaruba\\Cloudflare\\Nette\\": "src"
+    },
+    "classmap": [
+      "src/exceptions.php"
+    ]
+  }
+}

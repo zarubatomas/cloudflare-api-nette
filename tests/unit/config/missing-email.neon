@@ -1,0 +1,5 @@
+cloudflare:
+    key: abc
+
+extensions:
+    cloudflare: TomasZaruba\Cloudflare\Nette\DI\CloudflareExtension
