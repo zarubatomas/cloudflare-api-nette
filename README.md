@@ -1,5 +1,7 @@
 # Cloudflare API for Nette
 
+[![Build Status](https://travis-ci.org/zarubatomas/cloudflare-api-nette.svg?branch=master)](https://travis-ci.org/zarubatomas/cloudflare-api-nette)
+
 Implementation of [jamesryanbell/cloudflare](https://github.com/jamesryanbell/cloudflare) for Nette framework.
 
 
