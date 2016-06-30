@@ -20,5 +20,6 @@ install:
   -  composer update --prefer-source
 
 script:
+  - vendor/bin/codecept build
   - vendor/bin/codecept run
 
