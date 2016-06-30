@@ -22,13 +22,6 @@ use \TomasZaruba\Cloudflare\Nette\DI\CloudflareExtension;
 class CloudflareExtensionTest extends \Codeception\Test\Unit
 {
 
-    protected function _after()
-    {
-        $this->tester->cleanDir('tests/unit/temp');
-    }
-
-
-
     public function testExtensionMinimalConfiguration()
     {
         $container = $this->createContainer(__DIR__ . '/config/basic.neon');
@@ -37,8 +30,6 @@ class CloudflareExtensionTest extends \Codeception\Test\Unit
 
         $this->assertEquals('email@email.com', $cloudflareApi->email);
         $this->assertEquals('abc', $cloudflareApi->auth_key);
-
-        $this->tester->cleanDir('tests/unit/temp');
     }
 
 
@@ -50,8 +41,6 @@ class CloudflareExtensionTest extends \Codeception\Test\Unit
         $cloudflareCache = $container->getService('cloudflare.cache');
 
         $this->assertInstanceOf('\Cloudflare\Zone\Cache', $cloudflareCache);
-
-        $this->tester->cleanDir('tests/unit/temp');
     }
 
 
@@ -65,8 +54,6 @@ class CloudflareExtensionTest extends \Codeception\Test\Unit
         $this->assertInstanceOf('\TomasZaruba\Cloudflare\Nette\Api', $cloudflareApi);
 
         $this->assertEquals('exampleIdentifier', $cloudflareApi->getParameter('identifier'));
-
-        $this->tester->cleanDir('tests/unit/temp');
     }
 
 
@@ -78,8 +65,6 @@ class CloudflareExtensionTest extends \Codeception\Test\Unit
         $container = $this->createContainer(__DIR__ . '/config/missing-email.neon');
 
         $container->getService('cloudflare.cloudflare');
-
-        $this->tester->cleanDir('tests/unit/temp');
     }
 
 
@@ -91,8 +76,6 @@ class CloudflareExtensionTest extends \Codeception\Test\Unit
         $container = $this->createContainer(__DIR__ . '/config/missing-key.neon');
 
         $container->getService('cloudflare.cloudflare');
-
-        $this->tester->cleanDir('tests/unit/temp');
     }
 
 
