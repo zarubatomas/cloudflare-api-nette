@@ -35,7 +35,8 @@ cloudflare:
 use TomasZaruba\Cloudflare\Nette\Api;
 use Cloudflare\Zone\Cache;
 
-class ExampleClass {
+class ExampleClass
+{
 
     
     public function __construct(Api $cloudflareApi, Cache $cloudflareCache){
@@ -55,4 +56,5 @@ class ExampleClass {
         );
             
     }
+}
 ```
